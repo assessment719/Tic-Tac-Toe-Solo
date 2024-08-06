@@ -72,7 +72,7 @@ const computerTurn = () => {
             boxes[randIdx].innerText = "X";
             boxes[randIdx].style.color = "blue";
             boxes[randIdx].classList.add("disabled");
-            turnO = true; // Set turn back to user
+            turnO = true;
             count++;
 
             let isWinner = checkWinner();
