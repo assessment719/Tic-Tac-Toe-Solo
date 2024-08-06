@@ -67,6 +67,7 @@ const computerTurn = () => {
     }
 
     if (emptyBoxes.length > 0) {
+        boxes.classList.add("disabled");
         setTimeout(() => {
             let randIdx = emptyBoxes[Math.floor(Math.random() * emptyBoxes.length)];
             boxes[randIdx].innerText = "X";
@@ -80,7 +81,8 @@ const computerTurn = () => {
                 drawGame();
             }
         }, 500);
-    }
+        boxes.classList.remove("disabled");
+    };
 };
 
 // Add event listeners to each box
