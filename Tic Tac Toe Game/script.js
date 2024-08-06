@@ -69,6 +69,7 @@ const computerTurn = () => {
     if (emptyBoxes.length > 0) {
         boxes.classList.add("disabled");
         setTimeout(() => {
+            boxes.classList.remove("disabled");
             let randIdx = emptyBoxes[Math.floor(Math.random() * emptyBoxes.length)];
             boxes[randIdx].innerText = "X";
             boxes[randIdx].style.color = "blue";
@@ -81,7 +82,6 @@ const computerTurn = () => {
                 drawGame();
             }
         }, 500);
-        boxes.classList.remove("disabled");
     };
 };
 
