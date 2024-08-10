@@ -83,7 +83,6 @@ const computerTurn = () => {
     };
 };
 
-// Add event listeners to each box
 boxes.forEach((box) => {
     box.addEventListener("click", () => {
         if (turnO && box.innerText === "") {
